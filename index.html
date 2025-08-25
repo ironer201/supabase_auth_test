@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Authentication</title>
+</head>
+<body>
+  <div class="background finisher-header"></div>
+
+  <div class="container hidden">
+    <div class="title">
+      <p></p>
+    </div>
+    <div class="mainbody" id="signup">
+      
+        <div class="input-group">
+        <input type="text" id="name" placeholder=" " required />
+        <label for="name">Name</label>
+      </div>
+
+      <div class="input-group">
+        <input type="number" id="number" placeholder=" " required />
+        <label for="number">Phone Number</label>
+      </div>
+
+      <div class="input-group">
+        <input type="email" id="email" placeholder=" " required />
+        <label for="email">Email</label>
+      </div>
+
+      <div class="input-group">
+        <input type="password" id="password" placeholder=" " required />
+        <label for="password">Password</label>
+      </div>
+
+    <button type="submit" class="btn">Submit</button>
+    <!-- go to login page -->
+     <div class="login" id="sidebtn">
+      <p>Have a account ? login here</p>
+     </div>
+    </div>
+    
+    <div class="mainbody" id="login">
+       <div class="title">
+      <p id="logintitle">Log in</p>
+    </div>
+      <div class="input-group">
+        <input type="email" id="email" placeholder=" " required />
+        <label for="email">Email</label>
+      </div>
+
+      <div class="input-group">
+        <input type="password" id="password" placeholder=" " required />
+        <label for="password">Password</label>
+      </div>
+
+    <button type="submit" class="btn">Submit</button>
+    <div class="login" id="sidebtnlogin">
+      <p>Don't have a account ? sign up</p>
+     </div>
+    </div>
+  </div>
+
+  <script src="finisher-header.es5.min.js"></script>
+  <script>
+    new FinisherHeader({
+      count: 31,
+      size: { min: 2, max: 86, pulse: 0 },
+      speed: { x: { min: 0, max: 0.8 }, y: { min: 0, max: 0.2 } },
+      colors: {
+        background: "#15182e",
+        particles: ["#ff926b", "#87ddfe", "#acaaff", "#1bffc2", "#f9a5fe"]
+      },
+      blending: "none",
+      opacity: { center: 1, edge: 1 },
+      skew: 0,
+      shapes: ["s", "c"]
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
