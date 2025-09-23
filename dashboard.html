@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Dashboard</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">Dashboard</div>
+        <ul>
+            <li><p id="titlename"></p></li>
+            <li id="logout"><i class="fa fa-sign-in" aria-hidden="true"></i></li>
+        </ul>
+    </nav>
+    <div class="title">
+        <ul>
+            <li id="profile">Profile</li>
+            <li id="setting">Setting</li>
+        </ul>
+    </div>
+    <div class="profilemain" id="profilemain">
+        <div class="container">
+            <div class="one" id="one">
+                <p>name: <span id="name"></span></p>
+                <p>Email: <span id="email"></span></p>
+                <p>Phone: <span id="phone"></span></p>
+                <p>Address: <span id="address"></span></p>
+                <p>Gender: <span id="gender"></span></p>
+                <p>Nationality: <span id="nationality"></span></p>
+            </div>
+            <div class="two" id="two" >
+                <p>Name: <input type="text" id="nameedit" placeholder="Name"></p>
+                <p>Email: <input type="text" id="emailedit" placeholder="Email" ></p>
+                <p>Phone: <input type="text" id="phoneedit" placeholder="Phone" ></p>
+                <p>Present Address: <input type="text" id="presentaddressedit" placeholder="Present Address"></p>
+                <p>Permanent Address: <input type="text" id="permanentaddressedit" placeholder="Permanent Address"></p>
+                <p>Gender: 
+                    <select id="genderedit">
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </p>
+                <p>Nationality: <input type="text" id="nationalityedit" placeholder="Nationality"></p>
+            </div>
+        </div>
+        <!-- UPDATED: Save button + status message -->
+        <button id="saveProfileBtn">Save Profile</button>
+    </div>
+<!-- Scripts order: client first, then dashboard logic -->
+<script type="module" src="./supabaseClient.js"></script>
+<script type="module" src="./dashboard.js"></script>
+
+   
+</body>
+</html>

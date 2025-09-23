@@ -1,0 +1,193 @@
+body{
+    margin: 0;
+}
+.navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #2d3748;
+        padding: 1rem 2rem;
+        color: #fff;
+}
+    .navbar-logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+    }
+     ul li p {
+        color: #fff;
+        font-size: 1.5rem;
+        transition: color 0.2s;
+        margin: 0;
+    } 
+    ul li  {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.2s;
+    }
+        ul li i{
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.8rem;
+        transition: color 0.2s;
+        cursor: pointer;
+    }
+    ul li a:hover {
+        color: #63b3ed;
+    }
+    .title{
+
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+        background-color: #26467d;
+        color: white;
+    }
+    .title ul {
+        display: flex;
+        gap: 150px;
+        list-style: none;
+        padding: 0;
+        cursor: pointer;
+    }
+    .title ul li {
+        position: relative;
+    }
+
+    .title ul li::after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 0;
+        background: #63b3ed;
+        transition: width 0.3s;
+        left: 0;
+        bottom: -5px;
+    }
+
+    .title ul li:hover::after {
+        width: 100%;
+    }
+    .profilemain{
+        width: 100%;
+        display: flex;
+        background-color: #dbd9d9;
+        justify-content: center;
+        height: 87.8vh;
+        align-items: center;
+    }
+    .container {
+        width: 700px;
+        height: 430px; /* fixed height */
+        position: relative; /* children absolute */
+        overflow: hidden;
+        border-radius: 10px;
+    }
+/* Common styles for both */
+.one, .two {
+    position: absolute;
+    top: 0;
+    left: 100%; /* start off screen */
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border: 1px solid black;
+    border-radius: 9px;
+    font-size: 25px;
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+    padding: 15px;
+}
+    .one p{
+        padding-left: 15px;
+    }
+    .two p{
+        padding-left: 15px;
+    }
+
+/* active page */
+.active{
+    left: 0;
+    opacity: 1;
+}
+/* slide out */
+.out-left{
+    left: -100%;
+    opacity: 0;
+}
+.out-right{
+    left: 100%;
+    opacity: 0;
+}
+
+input[type="text"] {
+    border: none;
+    border-bottom: 2px solid #2d3748;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    padding: 6px 0 4px 0;
+    color: #2d3748;
+    transition: border-color 0.2s;
+    margin-left: 15px;
+}
+
+input[type="text"]:focus {
+    border-bottom: 2.5px solid #63b3ed;
+}
+
+button {
+    display: block;
+    margin-top: 500px;
+    padding: 12px 36px;
+    background-color: #2d3748;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    background-color: #63b3ed;
+    color: #2d3748;
+    box-shadow: 0 4px 16px rgba(99, 179, 237, 0.15);
+}
+select#genderedit {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+    border: 2px solid #2d3748;
+    border-radius: 6px;
+    padding: 8px 36px 8px 12px;
+    font-size: 1rem;
+    color: #2d3748;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=UTF-8,<svg width='16' height='16' fill='gray' xmlns='http://www.w3.org/2000/svg'><path d='M4 6l4 4 4-4' stroke='%2363b3ed' stroke-width='2' fill='none' stroke-linecap='round'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 18px 18px;
+    margin-left: 15px;
+}
+
+select#genderedit:focus {
+    border-color: #63b3ed;
+    box-shadow: 0 0 0 2px rgba(99,179,237,0.15);
+}
+
+select#genderedit option {
+    color: #2d3748;
+}
